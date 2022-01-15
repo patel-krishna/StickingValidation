@@ -1,5 +1,5 @@
 {
-  "name": "New Tab Example",
+  "name": "Stricking Validation",
   "version": "0.01",
   "description": "Display on new tab",
   "chrome_url_overrides":{
