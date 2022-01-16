@@ -1,4 +1,32 @@
 
+document.addEventListener('DOMContentLoaded', function() {
+    var link = document.getElementById('button');
+    // onClick's logic below:
+    link.addEventListener('click', function() {
+            addSticker();
+        });
+    });
+
+
+function addSticker() {
+    
+    let entries = []
+    let sticker =  document.getElementById("sticker").src; 
+ 
+  
+
+  if(localStorage.getItem('saved-sticker')){
+  	entries = JSON.parse(localStorage.getItem('saved-sticker')) 
+    entries.push(sticker)
+    localStorage.setItem('saved-sticker',JSON.stringify(entries))
+   }else{
+    entries.push(sticker)
+    localStorage.setItem('saved-sticker',JSON.stringify([sticker]))
+   }
+
+}
+
+
 
 //Send Message To Background
 chrome.runtime.sendMessage({name: "fetch"}, (response) => {
@@ -14,3 +42,5 @@ chrome.runtime.sendMessage({name: "fetch"}, (response) => {
     document.getElementById('graphic').src=response.images;
   
   });
+
+  
