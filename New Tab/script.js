@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var link = document.getElementById('button');
     // onClick's logic below:
     link.addEventListener('click', function() {
+            alert("Your sticker was added!");
             addSticker();
         });
     });
