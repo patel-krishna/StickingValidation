@@ -45,7 +45,7 @@ chrome.runtime.sendMessage({name: "fetch"}, (response) => {
     //document.body.style.background=response.colours;
     //this on works
     //document.body.style.backgroundColor="#d6c6f5";
-    document.body.style.backgroundColor=response.colours;
+    document.body.style.backgroundColor=response.colors;
   
   });
 
