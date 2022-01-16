@@ -35,13 +35,20 @@ chrome.runtime.onMessage.addListener((msg, sender, response) => {
             "Wow! Amazing!",
         ];
 
-        const images =[];
+        const images =[
+            "images/IMG_4070.png",
+            "images/IMG_4082.png",
+            "images/IMG_4085.png",
+            "images/IMG_4084.png",
+            "images/IMG_4083.png",
+        ];
         const colors =[]; 
 
         var index = Math.floor(Math.random()*5)
 
       //Send response
-      response({stickers: decodeURIComponent(stickers[index]), text:text[index], title:title[index]});
+
+      response({stickers: decodeURIComponent(stickers[index]), text:text[index], title:title[index], images: decodeURIComponent(images[index])});
   
     }
   
