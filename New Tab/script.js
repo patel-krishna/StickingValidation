@@ -12,5 +12,11 @@ chrome.runtime.sendMessage({name: "fetch"}, (response) => {
     document.querySelector('p').innerHTML=response.text;
     document.getElementById('sticker').src=response.stickers;
     document.getElementById('graphic').src=response.images;
+    //these don't work
+    //document.body.style.backgroundColor=response.colours;
+    //document.body.style.background=response.colours;
+    //this on works
+    //document.body.style.backgroundColor="#d6c6f5";
+    document.body.style.backgroundColor=response.colours;
   
   });

@@ -42,13 +42,18 @@ chrome.runtime.onMessage.addListener((msg, sender, response) => {
             "images/IMG_4084.png",
             "images/IMG_4083.png",
         ];
-        const colors =[]; 
+        const colors =[
+            "#fcd9f4",
+            "#d9ece4",
+            "#dbe9f4",
+            "#f1e0c6",
+            "#d6c6f5",]; 
 
         var index = Math.floor(Math.random()*5)
 
       //Send response
 
-      response({stickers: decodeURIComponent(stickers[index]), text:text[index], title:title[index], images: decodeURIComponent(images[index])});
+      response({stickers: decodeURIComponent(stickers[index]), text:text[index], title:title[index], images: decodeURIComponent(images[index]), colors:colors[index]});
   
     }
   
