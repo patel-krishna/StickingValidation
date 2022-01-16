@@ -13,8 +13,8 @@ chrome.runtime.onMessage.addListener((msg, sender, response) => {
 
         const stickers = [
             "images/IMG_3365.png",
-            "images/IMG_3366.png",
             "images/IMG_3367.png",
+            "images/IMG_3366.png",
             "images/IMG_3368.png",
             "images/IMG_3369.png"
         ];
